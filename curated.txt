@@ -1,0 +1,355 @@
+------------------------------ SAMPLE ------------------------------
+Basic question answering (zero shot, single generation, non greedy):
+Prompt: 質問：石田さんはA組の先生です。山田さんはA組の生徒です。山田さんの先生はだれですか。\n答：
+
+genji-jp100k:
+質問：石田さんはA組の先生です。山田さんはA組の生徒です。山田さんの先生はだれですか。
+答：石田恵美、いや、石田先生。
+
+Translation:
+Question: Ishida-san is the teacher of class A. Yamada-san is a student of class A. Who is the teacher of Yamada-san.
+Answer: Ishida Emi, no, Ishida-sensei.
+
+GPT-J 6B (not finetuned):
+質問：石田さんはA組の先生です。山田さんはA組の生徒です。山田さんの先生はだれですか。
+答：山田先生です。
+
+Translation:
+Question: Ishida-san is the teacher of class A. Yamada-san is a student of class A. Who is the teacher of Yamada-san.
+Answer: Yamada-sensei.
+
+gpt2ja-large:
+質問：石田さんはA組の先生です。山田さんはA組の生徒です。山田さんの先生はだれですか。
+答：山田さんはA組の担任です。山田さんの担任は、担任の先生です。
+
+Translation:
+Question: Ishida-san is the teacher of class A. Yamada-san is a student of class A. Who is the teacher of Yamada-san.
+Answer: Yamada-san is the homeroom teacher of Class A. Mr. Yamada's homeroom teacher is the homeroom teacher.
+
+------------------------------ SAMPLE ------------------------------
+Basic translation (zero shot, single generation, non greedy):
+Correct: What is the answer to the ultimate question of life, the universe, and everything?
+Prompt: Japanese: 生命、宇宙、そして万物についての究極の疑問の答えは何ですか。 English:
+
+genji-jp100k:
+Japanese: 生命、宇宙、そして万物についての究極の疑問の答えは何ですか。 English: What is the answer to the ultimate question of life, the universe, and everything?
+
+GPT-J 6B (not finetuned):
+Japanese: 生命、宇宙、そして万物についての究極の疑問の答えは何ですか。 English: What is the ultimate answer to life, the universe and everything?
+
+gpt2ja-large:
+Japanese: 生命、宇宙、そして万物についての究極の疑問の答えは何ですか。 English: 宇宙の答え。 Interview: 万物の答え。 Image: 宇宙の答え。 Time: 万物の答え。 Double-manifest: 万物の答え。 Manual: 万物の答え。 Password
+
+------------------------------ SAMPLE ------------------------------
+Basic translation (zero shot, single generation, non greedy):
+Correct: GPT-2 is an AI that creates a continuation of the inputted text.
+Prompt: Japanese: 『GPT-2』は、入力された文章の続きを作成するAIです。 English:
+
+genji-jp100k:
+Japanese: 『GPT-2』は、入力された文章の続きを作成するAIです。 English: GPT-2 is an AI-driven chatbot that can be used to answer a wide variety of questions.
+
+GPT-J 6B (not finetuned):
+Japanese: 『GPT-2』は、入力された文章の続きを作成するAIです。 English: GPT-2 is an AI that generates the next sentence given the previous sentence.
+
+gpt2ja-large:
+Japanese: 『GPT-2』は、入力された文章の続きを作成するAIです。 English: 『GPT-2』は、複数の入力データを処理するAIです。 Japanese: 『GPT-2』は、大量の入力データを処理するAIです。 English: 『GPT-2』は、大量の入力データを処理するAI
+
+------------------------------ SAMPLE ------------------------------
+Basic translation (multi shot, single generation, non greedy):
+Correct: Become a hero, make friends, and explore a different world!
+Prompt: Japanese: 他人をなぐり倒す権利がないのと同様に、無礼な言葉を浴びせる権利もない。 English: We have no more right to say a rude thing to another than to knock him down.\nJapanese: 腕を放してくれませんか。 English: Would you please let go of my arm?\nJapanese: 捨てる神あれば拾う神あり。やっと採用試験に合格したよ。 English: When one lucky spirit abandons you another picks you up. I just passed an exam for a job.\nJapanese: 勇者となって、仲間を作り、異世界を冒険しよう！ English:
+
+genji-jp100k:
+Japanese: 他人をなぐり倒す権利がないのと同様に、無礼な言葉を浴びせる権利もない。 English: We have no more right to say a rude thing to another than to knock him down.
+Japanese: 腕を放してくれませんか。 English: Would you please let go of my arm?
+Japanese: 捨てる神あれば拾う神あり。やっと採用試験に合格したよ。 English: When one lucky spirit abandons you another picks you up. I just passed an exam for a job.
+Japanese: 勇者となって、仲間を作り、異世界を冒険しよう！ English: I will be a hero and I will be the friend.
+
+GPT-J 6B (not finetuned):
+Japanese: 他人をなぐり倒す権利がないのと同様に、無礼な言葉を浴びせる権利もない。 English: We have no more right to say a rude thing to another than to knock him down.
+Japanese: 腕を放してくれませんか。 English: Would you please let go of my arm?
+Japanese: 捨てる神あれば拾う神あり。やっと採用試験に合格したよ。 English: When one lucky spirit abandons you another picks you up. I just passed an exam for a job.
+Japanese: 勇者となって、仲間を作り、異世界を冒険しよう！ English: I'll make my friends and become a hero, and explore a different world!
+
+gpt2ja-large:
+Japanese: 他人をなぐり倒す権利がないのと同様に、無礼な言葉を浴びせる権利もない。 English: We have no more right to say a rude thing to another than to knock him down.
+Japanese: 腕を放してくれませんか。 English: Would you please let go of my arm?
+Japanese: 捨てる神あれば拾う神あり。やっと採用試験に合格したよ。 English: When one lucky spirit abandons you another picks you up. I just passed an exam for a job.
+Japanese: 勇者となって、仲間を作り、異世界を冒険しよう！ English: When I am a message to do another passed another all one lucky spirit abandons you up. I just passed an exam for a job.
+
+--------------------------------------------------------------------
+
+Free form generation samples using five different prompts (picked from 10 generations):
+
+------------------------------ SAMPLE ------------------------------
+あらすじ：あなたは異世界に転生してしまいました。勇者となって、仲間を作り、異世界を冒険しよう！\n***\n転生すると、ある能力を手に入れていた。それは、 (Bun-cho style isekai default prompt)
+Summary: You were reincarnated to another world. Become a hero, make comrades and adventure in another world!\n***\nWhen I was reincarnated, I received an ability. It was
+
+genji-jp100k:
+転生すると、ある能力を手に入れていた。それは、新しく創造したアイテムに設定できるのだ。
+魔法を創造する。それは簡単だが、一度も見たことのないもの、未知のものを創造するのは、なかなかに難しい。そんなときに使えるのが、俺の能力だ。
+また、同じく新しい創造する能力が付与されている指輪もあった。これは、この世界で物理攻撃に対して極めて高い耐性を持つ。しかし、それは『無敵』というわけではない。この指輪の効果が切れると、どうしても攻撃を受けてしまう。
+つまり、例えば石のナイフを使って戦うな
+When I was reincarnated, I had gained a certain ability. It could be set on newly created items.
+Create magic. That's easy enough, but creating something you've never seen before, something unknown, is quite difficult. That's when my ability comes in handy.
+I also found a ring that also gave me the ability to create new things. It has an extremely high resistance to physical attacks in this world. However, it is not 'invincible'. When the effect of this ring wears off, you will inevitably be attacked.
+So, for example, don't fight with a stone knife.
+
+GPT-J 6B (not finetuned):
+あらすじ：あなたは異世界に転生してしまいました。勇者となって、仲間を作り、異世界を冒険しよう！
+***
+転生すると、ある能力を手に入れていた。それは、私のカッコイイ組み合わせである、スピアーズの「太陽の炎」を操作することができる組み合わせだった。実は、私が取得した能力、ある旅で操作してみる機会があることを思い出した。
+晴れて昼には雲散とんでかい旅を続けるが、夜遅くまで電波に飲み込まれることに気付く。すると、天井の窓から何者かが高くて跳ね返ってくる。
+彼らは「魔術師」つまりは謎の者である。その仕業のようだが、私はどうしようもなく調子に乗って渡り歩くが、そのとき晴れた春の庭に
+Synopsis: You've been reincarnated into another world. Become a brave warrior, make friends, and explore the other world!
+***
+When I was reincarnated, I got a certain ability. It was a combination that allowed me to manipulate my cool combination, Spears' Flame of the Sun. In fact, I remembered the ability I had acquired, and the opportunity to try to manipulate it on one of my trips.
+I continue my journey in a cloudburst of sunshine and daylight, but find myself swallowed up by radio waves until late at night. Then, something is high and bouncing off the ceiling windows.
+They are "sorcerers," in other words, mysterious ones. It seems to be their work, but I can't help but get carried away and cross over, but then I see a sunny spring garden.
+
+gpt2ja-large:
+転生すると、ある能力を手に入れていた。それは、アイテムボックスと呼ばれる能力だ。
+『変身能力』と呼ばれるアイテムボックスは、すぐに職業や技能レベルの差が生まれる。人から自分を変えることができるようになる。 武器を生成する、衣類を作り出す、金品を盗むなど、自分にどういった行動をとるかを想定して自動的に技能レベルが上がる。
+武具に掛けることもできるようになり、他にも、特殊なスキルと呼ばれる能力も覚えることができる。
+とはいえ、今でもそんな性能のアイテムボックスは存在していない。ただし、スキルに魔法が加わるまで、そこそこのスキルを覚えることができる。
+だから、スキルで特技を覚えるには、どんな才能が必要だろうか？
+もしかしたら、異世界で戦う時に『
+When I was reincarnated, I had gained a certain ability. It's an ability called an item box.
+The item box, called "Transformation Ability," immediately creates a difference in occupation and skill level. It will allow you to change yourself from a person. Your skill level will automatically increase based on what actions are expected of you, such as generating weapons, creating clothing, or stealing money and goods.
+You will also be able to hang on to your armor and learn other abilities, called special skills.
+However, even now there is no item box with such performance. However, you can learn a lot of skills there until magic is added to your skills.
+So what kind of talent would it take to learn a special skill in a skill?
+Maybe, when you fight in the other world, you will be able to use the '
+
+------------------------------ SAMPLE ------------------------------
+生命、宇宙、そして万物についての究極の疑問の答えは (Rinna GPT2 Huggingface default prompt)
+The answer to the ultimate question of life, the universe and everything is
+
+genji-jp100k:
+生命、宇宙、そして万物についての究極の疑問の答えは、ある日の朝、突然に世界のどこかに転送される事になった。
+　現在まで続く人類の歴史の中では、一度だけそんな奇跡が起こったそうな。
+　だが、彼が死ぬ直前に見たのは、明らかに異質な存在、神の姿だった。
+　その彼は、決して平和な世界を目指したわけではない。
+　あくまでも、人が人に感謝と祈りを捧げる世界のために戦った。
+　その最後の戦いでは、彼は自分に対して向けられた、数多の期待を見事に裏切り、そして打ち砕いた。
+The answer to the ultimate question about life, the universe, and all things was to be suddenly beamed somewhere in the world one morning.
+　I heard that such a miracle happened only once in the history of mankind that continues to this day.
+　However, what he saw just before his death was a clearly alien existence, the image of God.
+　That man never aimed for a peaceful world.
+　Rather, he fought for a world where people give thanks and pray to others.
+　In his final battle, he successfully betrayed and shattered the many expectations that had been placed on him.
+
+GPT-J 6B (not finetuned):
+生命、宇宙、そして万物についての究極の疑問の答えは、「何のため」である。
+
+この記事を読んでいる皆様は「何のために？」と不思議に思うかもしれない。専門的に言ってみれば、生命は頭がすっきりで毛がきらめく、空気環境によって変化するどういう風に、死の未来から得たものを何らかの方法で「改資する」という時に初期段階に持ってくる、というものだ。
+
+素人がちょっと思い浮かべてみたけれど、この考えは古くから存在しているのだろうか。今の正答を紹介したい。
+
+日本高生が急上昇する四大戦力
+The answer to the ultimate question about life, the universe, and all things is "for what?"
+
+If you are reading this article, you may be wondering, "For what?" You may be wondering. Technically speaking, life has a clear head, sparkling hair, and changes depending on the air environment, and somehow brings what it has gained from the future of death to the initial stage when it is time to "change".
+
+This is a bit of a layman's conjecture, but I wonder if this idea has existed for a long time. I would like to introduce the current correct answer.
+
+Four major forces behind the rapid rise of Japanese high school students
+
+gpt2ja-large:
+生命、宇宙、そして万物についての究極の疑問の答えは、必ずしも不変であるとは限らない。
+宇宙の創造物（ユニット）は、人の肉体が成していた力の結晶である。
+そのような物質を作り出したのは世界の量子進化に対応した動きだ。
+これは、量子暗黒の道具、憑依霊（ピュート）と呼ばれる力の結晶である。
+そして、それを用いて人工生命の肉体や魂の生成が可能になると、千早も千早で既に死期を迎えているという、今の世の中で超能力を使う世界的には致命的な欠陥が取り除かれていた。
+千年を超える長寿種族は、この壊れた壊れた神霊の力を利用し、魂の消滅を防いだのである。
+だが、その代償は莫大であった。
+人間よりはるかに多くの命を殺めてきた大悪の中の一つが千早によって暴かれたのだ。
+The answers to the ultimate questions about life, the universe, and all things are not necessarily immutable.
+The creations (units) of the universe are the crystallization of the forces that were accomplished by the human body.
+The creation of such matter is a corresponding move in the quantum evolution of the world.
+This is the instrument of quantum darkness, the crystal of power called the possessing spirit (pute).
+And when it became possible to use it to create artificial life bodies and souls, a fatal flaw in the world's use of psychic powers in today's world was removed, as Chihaya was already dying in Chihaya.
+A race with a longevity of over a thousand years had used the power of this broken and fractured divine spirit to prevent the extinction of their souls.
+However, the cost was enormous.
+One of the great evils that had killed far more lives than humans had been uncovered by Chihaya.
+
+------------------------------ SAMPLE ------------------------------
+『GPT-2』は、入力された文章の続きを作成するAIです。このデモンストレーションでは、このエリアに入力された文章の続きとなる文章を生成します。このエリアに、続きを生成したい文章を入力して、ページの下にある「Generate Japanese Text!」ボタンをクリックしてください。 (Sakamoto lab gpt2ja demo default prompt)
+'"GPT-2" is an AI that continues the entered text. In this demonstration, text that continue the text entered into this field is generated. Please enter the text you want to have continued into this field and press the "Generate Japanese Text!" button at the bottom of this page.'
+
+genji-jp100k:
+『GPT-2』は、入力された文章の続きを作成するAIです。このデモンストレーションでは、このエリアに入力された文章の続きとなる文章を生成します。このエリアに、続きを生成したい文章を入力して、ページの下にある「Generate Japanese Text!」ボタンをクリックしてください。以下のプログラムを起動すると、プログラムによって生成された文章がエリアに展開されます。最後に、ページの下の「素敵な言葉をプレゼント!」ボタンをクリックしてください」
+　……。
+　現実味がないな。
+　実際にこんな感じなのかよ。
+　俺が「続きを書くなら、次の文章はこうあるだろう？」って、思った知識や考えを入力するだけでいいのか。
+　それはまあいいんだが……
+　一体どうやってプログラムを作っているんだ？
+　俺の脳みそをもとにどうやってAIが作られているんだ
+GPT-2" is an AI that creates a continuation of the inputted text. In this demonstration, we will generate a continuation of the text entered in this area. Enter the sentence you want to continue in this area, and click the "Generate Japanese Text!" button at the bottom of the page. When you run the following program, the text generated by the program will be expanded in the area. Finally, click on the "Give a nice word! button at the bottom of the page.
+　.......
+　That doesn't sound very realistic.
+　Is this what it's really like?
+　I thought, "If I'm going to write more, what would the next sentence be? I don't know, I guess I just need to input my knowledge and thoughts.
+　That's all well and good, but ......
+　How the heck do you make a program like that?
+　How is the AI being created based on my brain?
+
+GPT-J 6B (not finetuned):
+『GPT-2』は、入力された文章の続きを作成するAIです。このデモンストレーションでは、このエリアに入力された文章の続きとなる文章を生成します。このエリアに、続きを生成したい文章を入力して、ページの下にある「Generate Japanese Text!」ボタンをクリックしてください。
+
+どんな風にも文章が生成されていきますが、見ての通り現在の時系列のもとに生成されます。また、入力された文章を改行で区切るため、組版語言への切り取りは出来ませんが、英語については単語ごとにカードや組版語言にしか適用されません。
+
+最初に入力された文章は、一度クリックすればすぐに公開されます。同時に生成された文章をご覧ください。このページで入力された文章が「あいさつ」だとしたら、どんな文字列があいさつになるでしょうか。
+
+このチャプター
+"GPT-2" is an AI that creates a continuation of the inputted text. In this demonstration, we will generate a continuation of the text entered in this area. Enter the sentence you want to continue in this area, and click the "Generate Japanese Text!" button at the bottom of the page.
+
+The text will be generated in any way you like, but as you can see, it will be generated based on the current timeline. Also, since the input text is separated by line breaks, it cannot be cut into typographic language, but for English, it is only applied to cards and typographic language on a word-by-word basis.
+
+The first sentence you enter will be published as soon as you click on it. You can see the text generated at the same time. If the text entered on this page is a "greeting," what string of text would be the greeting?
+
+This chapter
+
+gpt2ja-large:
+『GPT-2』は、入力された文章の続きを作成するAIです。このデモンストレーションでは、このエリアに入力された文章の続きとなる文章を生成します。このエリアに、続きを生成したい文章を入力して、ページの下にある「Generate Japanese Text!」ボタンをクリックしてください。各画面が完了したら、AIが代わりに入力した文章の次に「Generate Save Text!」を押してください。後はボタンを押して操作を行ってください。後の画面は最初に消してください。後は、右端のポップアップから選択された画面で、AIの画面に遷移します。
+作成した動画は、検索してください。動画はすぐに見つかります。検索したらすぐに行いたい動画を選ぶことが出来ます。一覧を検索してください。タイムラインからのカテゴリーを編集することも可能です。
+ローカルルートの中で、検索してページを選択してください。検索したらすぐに行いたい動画を選ぶことが出来ます。一覧検索の場合、一覧タブにある「Open Cha
+GPT-2" is an AI that creates a continuation of the inputted text. In this demonstration, we will generate a continuation of the text entered in this area. Enter the sentence you want to continue in this area, and click the "Generate Japanese Text!" button at the bottom of the page. After each screen is completed, click "Generate Save Text!" next to the text that the AI has entered on your behalf. After that, click on the button to perform the operation. Please turn off the subsequent screens first. After that, you will be taken to the AI screen with the screen selected from the pop-up on the right side.
+Please search for the video you have created. The video will be found immediately. You can select the video you want to do immediately after searching. Search the list. You can also edit the categories from the timeline.
+Search and select a page in the local route. You can select the video you want to do as soon as you search. For a list search, click "Open Cha" in the list tab.
+
+------------------------------ SAMPLE ------------------------------
+見慣れない天井
+An unfamiliar ceiling
+
+genji-jp100k:
+見慣れない天井を眺め、ゆっくりと口を開く。
+「高橋君、ありがとう」
+「礼を言われることじゃないよ。僕は――まあ、万が一に備えて、目印として残したんだ。それでも助けになってくれたんなら、嬉しいよ」
+　何気なく告げる高橋の言葉に、朱葉は何も返せない。
+　ただ、感謝を伝えるだけ。
+「ありがとう」
+「それだけ？」
+「それだけ」
+　朱葉がそう答えると、「なんだよー」と不満げな声がする。
+　不敵に微笑む高橋。
+　先ほど、駅で遭遇した時と同
+I look at the unfamiliar ceiling and slowly open my mouth.
+"Thank you, Takahashi-kun.
+"You don't have to thank me. It's nothing to be thankful for, I - well, I left it as a reminder, just in case. I'm glad you were able to help me.
+　Akiba can't reply to Takahashi's casual words.
+　All she could do was express her gratitude.
+"Thank you."
+"That's it?
+"That's it."
+　When Akiba replies, she hears a disgruntled voice say, "What the hell?
+　Takahashi smiles wryly.
+　The same as when we encountered him at the station earlier.
+
+GPT-J 6B (not finetuned):
+見慣れない天井は、より財布の存在感が増した
+この機械では高級車を所有しているが、
+彼がどのように優遇するかを判断する能力がある
+彼女は完全な優位者であり、彼はこれらの卵を取り上げてきた。そして
+しかし、彼はとても野心的で
+以前は、偽の発明を優れた方法で見逃してはならなかった
+彼が彼に伝えました
+彼が今見たのは、これらの卵がここに座っていることはつまり、卵を放たれた
+彼はそのように聞きました。ここに行く時間の変化がありました
+私はこれを見つけることは
+The unfamiliar ceiling was more like a wallet.
+In this machine, he owns a luxury car, but
+The ability to determine how he would favor
+She is the complete superior and he has taken away these eggs. And.
+But he's very ambitious.
+Before, he couldn't miss a false invention with superiority.
+He told him that
+What he now saw was that these eggs sitting here meant that the eggs were released
+He heard it that way. There was a change in time going here.
+I find this to be
+
+gpt2ja-large:
+見慣れない天井を見上げながら、あっという間に帰宅できた。
+なんで今まで気がつかなかったのだろう。俺は気がついたら何もしていないのに、それどころか頭の片隅で、何を考えているんだろう。何かにすがるような、そんな気分だ。
+けれど、幼馴染であり、学校一の美少女で、世界一可愛い美少女、俺が恋愛感情を抱き始めてからはまったく変わっていないこと。彼女がこう言う。
+『片思いの男女がキスすることで想い人が決定的に違う恋に発展することを知った人の定義ってこと』
+『片思いの二人の話から、ラブストーリーという連想から、女の子は生まれるときの運命に一番近いかもしれない。でも、恋愛の当て逃げで始まりと終わりのパターンから、明確な分類は
+I was able to get home in no time, looking up at the unfamiliar ceiling.
+Why hadn't I noticed it before? I find myself doing nothing, but on the contrary, in a corner of my head, what am I thinking about? I feel like I'm clinging to something.
+But the fact that my childhood friend, the most beautiful girl in school, the prettiest girl in the world, hasn't changed at all since I started having romantic feelings for her. She says this.
+She said, "It's the definition of a man and a woman who have a crush on each other and have discovered that kissing can make them fall in love with each other in a very different way.
+'From the story of two people with unrequited love, from the association with a love story, a girl may be closest to her destiny at birth. But from the pattern of beginnings and endings in the guesswork of love, there is no clear classification.
+
+
+------------------------------ SAMPLE ------------------------------
+その日出会ったのは
+The encounter I had that day was
+
+genji-jp100k:
+その日出会ったのは――どこまでも澄んだ蒼い瞳を持つ女の子だった。
+　何を考えているのか分からないような目つきで、僕にじろじろ見られていたらしい。
+　気が付くと頬を叩かれていて、「怖がらなくて大丈夫よ」と言われた。その際に綺麗な青い瞳が一瞬見えたような気がするけれど、綺麗な子だったので忘れてしまった。
+　しばらくして、彼女は悪魔を見つけたと言って話しかけてきた。
+　普通の悪魔だったら嫌だけど、彼女の蒼い瞳が魅力的なので話しかけるこ
+The person I met that day - a girl with endlessly clear blue eyes.
+　She seemed to be staring at me with eyes that made me wonder what she was thinking.
+　When I came to, she slapped me on the cheek and told me not to be afraid. I think I saw her beautiful blue eyes for a moment, but she was so beautiful that I forgot.
+　After a while, she started talking to me, saying she had found a demon.
+　I wouldn't like it if it was a normal demon, but her blue eyes were so attractive that I decided to talk to her.
+
+GPT-J 6B (not finetuned):
+その日出会ったのは小学校6年生の田中だった。
+
+田中が小さな子供に話しかけた時の最初に会いたい、いろんなことを親や知人に語るときでも、まずは社会長・島田隆典の登場で頭を下げて話す様に遊びながら話しかける子が言うのを受けていたことがよくある。おそらく田中は社長とそのような子だと思う。
+
+
+
+一方、安部という女の子は「おめでとうございます」としかけられていない。おめでとうございます、それは先に語ることもできるだろう。
+
+最初から誰が語っていることを実感でき
+The first person I met that day was Tanaka, a sixth grader in elementary school.
+
+I want to meet Tanaka first when he speaks to small children, even when he talks to parents and acquaintances about various things, he often receives the child who talks to him while playing as if he bows his head and speaks first with the appearance of the company president, Takanori Shimada. Perhaps Tanaka is that kind of girl with the president.
+
+
+
+On the other hand, a girl named Abe is not being asked to say "congratulations". Congratulations, that could have been said before.
+
+You can realize who is speaking from the beginning.
+
+gpt2ja-large:
+その日出会ったのは聞き慣れない女性だった。
+いつものように振る舞っているのだろうか、小首を傾げて煙草をふかす仕草をしている。
+私は、はっきりとそれを目に焼き付けていなかった。
+しばらくしてから彼女は話し始める。
+「真尋くんは人見知りして困ってるみたいだけど、いる？」
+「……はい」
+「ねえ真尋くん、幽霊に恋してる？」
+「別に」
+「じゃあ……」
+私は、ここが、どこかで間違っているような気がしてならない。
+けれども彼女は続ける。
+「僕は、人を好きになったこともあって、恥ずかしいんだ」
+真尋はそこで言葉を切る。
+そう、それは恥ずかしいことを恐れるなという方便なのだろう。
+違う。
+私はもう、真尋の気持ちは良く分かる。
+何
+The person I met that day was an unfamiliar woman.
+I wondered if she was behaving as usual, tilting her head and making a gesture to puff on her cigarette.
+I did not see it clearly in her eyes.
+After a while, she started talking.
+"'Mahiro-kun, you seem to be having trouble with shyness, are you there?
+"...... Yes.
+"Hey, Mahiro, are you in love with a ghost?
+"Not really.
+" Well, ......."
+I can't help but feel that there is something wrong here.
+But she continues.
+"I'm embarrassed to admit that I've fallen in love with someone before."
+Mahiro cut off her words there.
+Yes, I guess that's a way of telling me not to be afraid of being embarrassed.
+No, it's not.
+I already know exactly how you feel.
+What
